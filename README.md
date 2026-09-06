@@ -1,60 +1,54 @@
 <div align="center">
 
-  <!-- Minimalist Monochrome Banner (Inspired by @hainguyen011) -->
+  <!-- Minimalist Monochrome Banner -->
   <img src="assets/header.svg" alt="DntdToM // Information Security Researcher" width="100%" />
 
-  <br/><br/>
+</div>
 
-  <h3>Information Security Researcher // Malware Analysis &amp; Threat Detection</h3>
+<br/>
 
-  <p>
-    Undergraduate researcher specializing in binary reverse engineering, dynamic malware dissection, and detection engineering.<br/>
-    Focusing on payload unpacking, memory forensics, and crafting resilient YARA &amp; Sigma detection rules.
-  </p>
+<div align="center">
 
-  <p>
-    <code>PE / ELF Dissection</code> &nbsp;•&nbsp;
-    <code>Reverse Engineering</code> &nbsp;•&nbsp;
-    <code>YARA &amp; Sigma Rules</code> &nbsp;•&nbsp;
-    <code>Threat Hunting</code>
-  </p>
+  **Information Security Researcher · Malware Analysis & Threat Detection**
 
-  <br/>
-
-  <!-- Commit Activity Graph (Pure Dark Monochrome) -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DntdToM&bg_color=0d1117&color=ffffff&line=ffffff&point=8b949e&area=true&area_color=161b22&hide_border=true" width="100%" alt="Commit Activity Graph" />
+  <sub>Undergraduate researcher focused on binary reverse engineering, malware dissection, and detection rule engineering.</sub>
 
   <br/><br/>
 
-  <!-- Contribution Grid Snake (Monochrome Grayscale) -->
+  `PE / ELF Dissection` · `Reverse Engineering` · `YARA & Sigma Rules` · `Threat Hunting`
+
+</div>
+
+<br/>
+
+<div align="center">
+
+  <!-- GitHub Stats (Monochrome) -->
+  <img src="https://github-readme-stats.vercel.app/api?username=DntdToM&show_icons=true&bg_color=0d1117&text_color=8b949e&title_color=c9d1d9&icon_color=8b949e&border_color=21262d&border_radius=6&include_all_commits=true&count_private=true&hide_title=false" height="160" alt="GitHub Stats" />
+  &nbsp;&nbsp;
+  <img src="https://streak-stats.demolab.com/?user=DntdToM&background=0d1117&border=21262d&stroke=30363d&ring=c9d1d9&fire=ffffff&currStreakNum=ffffff&sideNums=c9d1d9&currStreakLabel=8b949e&sideLabels=8b949e&dates=484f58&border_radius=6" height="160" alt="Commit Streak" />
+
+</div>
+
+<br/>
+
+<div align="center">
+
+  <!-- Contribution Snake (Monochrome) -->
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DntdToM/DntdToM/output/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DntdToM/DntdToM/output/github-contribution-grid-snake.svg" />
-    <img src="https://raw.githubusercontent.com/DntdToM/DntdToM/output/github-contribution-grid-snake-dark.svg" alt="Contribution Grid" width="100%" />
+    <img src="https://raw.githubusercontent.com/DntdToM/DntdToM/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake" width="100%" />
   </picture>
 
-  <br/><br/>
+</div>
 
-  <!-- Commit & Streak Metrics (Monochrome Theme) -->
-  <table border="0">
-    <tr>
-      <td align="center">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=DntdToM&theme=dark&background=0d1117&border=21262d&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakLabel=ffffff&sideLabels=8b949e&dates=8b949e&hide_border=false&border_radius=6" alt="Commit Streak" />
-      </td>
-      <td align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=DntdToM&show_icons=true&theme=dark&bg_color=0d1117&text_color=8b949e&title_color=ffffff&icon_color=ffffff&border_color=21262d&border_radius=6&hide_border=false" alt="GitHub Stats" />
-      </td>
-    </tr>
-  </table>
+<br/>
 
-  <br/>
+---
 
-  <hr width="40%" style="border: 0.5px solid #21262d;" />
-
-  <p>
-    <a href="mailto:dntd0710@gmail.com">dntd0710@gmail.com</a> &nbsp;•&nbsp;
-    <a href="https://github.com/DntdToM">github.com/DntdToM</a> &nbsp;•&nbsp;
-    <a href="https://www.linkedin.com">linkedin</a>
-  </p>
-
+<div align="center">
+  <sub>
+    <a href="mailto:dntd0710@gmail.com">dntd0710@gmail.com</a> · <a href="https://github.com/DntdToM">github.com/DntdToM</a>
+  </sub>
 </div>
