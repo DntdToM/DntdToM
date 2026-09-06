@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 260" width="100%" height="260" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020805" />
+      <stop offset="50%" stop-color="#05120a" />
+      <stop offset="100%" stop-color="#010403" />
+    </linearGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.5" opacity="0.4" />
+    </pattern>
+
+    <!-- Cyber Grid Pattern -->
+    <pattern id="cyberGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00ff66" stroke-width="0.5" opacity="0.08" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="superGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="2" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes fall1 { 0% { transform: translateY(-160px); opacity: 0; } 10% { opacity: 0.9; } 90% { opacity: 0.9; } 100% { transform: translateY(280px); opacity: 0; } }
+    @keyframes fall2 { 0% { transform: translateY(-200px); opacity: 0; } 15% { opacity: 0.85; } 85% { opacity: 0.85; } 100% { transform: translateY(290px); opacity: 0; } }
+    @keyframes fall3 { 0% { transform: translateY(-180px); opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { transform: translateY(300px); opacity: 0; } }
+    @keyframes fall4 { 0% { transform: translateY(-220px); opacity: 0; } 20% { opacity: 0.75; } 80% { opacity: 0.75; } 100% { transform: translateY(270px); opacity: 0; } }
+    
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 8px #00ff66); }
+      50% { opacity: 1; filter: drop-shadow(0 0 16px #00ff66) drop-shadow(0 0 25px #00ffaa); }
+    }
+
+    @keyframes scanBeam {
+      0% { transform: translateY(-10px); }
+      100% { transform: translateY(270px); }
+    }
+
+    @keyframes glitchText {
+      0%, 94%, 100% { transform: translate(0, 0); }
+      95% { transform: translate(-2px, 1px); }
+      96% { transform: translate(2px, -1px); }
+      97% { transform: translate(-1px, 2px); }
+      98% { transform: translate(1px, -2px); }
+    }
+
+    @keyframes radarBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    .m-col1 { animation: fall1 4.2s linear infinite; font-family: 'Courier New', monospace; font-size: 11px; fill: #00ff66; }
+    .m-col2 { animation: fall2 3.5s linear infinite; font-family: 'Courier New', monospace; font-size: 11px; fill: #00e65c; }
+    .m-col3 { animation: fall3 5.1s linear infinite; font-family: 'Courier New', monospace; font-size: 10px; fill: #00cc44; }
+    .m-col4 { animation: fall4 3.9s linear infinite; font-family: 'Courier New', monospace; font-size: 11px; fill: #00ff88; }
+    
+    .hud-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Consolas', monospace;
+      font-weight: 900;
+      letter-spacing: 6px;
+      animation: pulseGlow 3s ease-in-out infinite, glitchText 6s infinite;
+    }
+
+    .scan-beam {
+      animation: scanBeam 4s linear infinite;
+    }
+
+    .status-dot {
+      animation: radarBlink 1.5s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="950" height="260" fill="url(#bgGradient)" rx="10" />
+  <rect width="950" height="260" fill="url(#cyberGrid)" rx="10" />
+
+  <!-- Outer Cyber Border -->
+  <rect x="1" y="1" width="948" height="258" rx="9" fill="none" stroke="#00ff66" stroke-width="1.2" opacity="0.35" />
+  <rect x="4" y="4" width="942" height="252" rx="7" fill="none" stroke="#003b1a" stroke-width="0.8" />
+
+  <!-- Matrix Falling Rain Streams (Background Code) -->
+  <g opacity="0.35">
+    <!-- Stream 1 -->
+    <g class="m-col1" transform="translate(35, 0)">
+      <text y="0" fill="#ffffff">0x4D</text>
+      <text y="16">0x5A</text>
+      <text y="32">MZ</text>
+      <text y="48">0x90</text>
+      <text y="64">NOP</text>
+      <text y="80">CALL</text>
+      <text y="96">EIP</text>
+      <text y="112">0xCC</text>
+      <text y="128">PE32</text>
+      <text y="144">XOR</text>
+      <text y="160">01</text>
+      <text y="176">RAX</text>
+    </g>
+
+    <!-- Stream 2 -->
+    <g class="m-col2" transform="translate(90, 0)">
+      <text y="0" fill="#ffffff">YARA</text>
+      <text y="16">RULE</text>
+      <text y="32">0101</text>
+      <text y="48">SIGMA</text>
+      <text y="64">HOOK</text>
+      <text y="80">0xAA</text>
+      <text y="96">INJ</text>
+      <text y="112">DLL</text>
+      <text y="128">0x7F</text>
+      <text y="144">ELF</text>
+      <text y="160">WORM</text>
+    </g>
+
+    <!-- Stream 3 -->
+    <g class="m-col3" transform="translate(160, 0)">
+      <text y="0" fill="#ffffff">0x00</text>
+      <text y="16">VMBEG</text>
+      <text y="32">SAND</text>
+      <text y="48">BOX</text>
+      <text y="64">0xFE</text>
+      <text y="80">HASH</text>
+      <text y="96">SHA2</text>
+      <text y="112">SSDEEP</text>
+      <text y="128">SECT</text>
+    </g>
+
+    <!-- Stream 4 (Center-left) -->
+    <g class="m-col4" transform="translate(230, 0)">
+      <text y="0" fill="#ffffff">ASM</text>
+      <text y="16">PUSH</text>
+      <text y="32">RBP</text>
+      <text y="48">MOV</text>
+      <text y="64">RSP</text>
+      <text y="80">0xFF</text>
+      <text y="96">RET</text>
+      <text y="112">0x20</text>
+    </g>
+
+    <!-- Stream 5 (Center-right) -->
+    <g class="m-col2" transform="translate(710, 0)">
+      <text y="0" fill="#ffffff">IOC</text>
+      <text y="16">C2</text>
+      <text y="32">BEAC</text>
+      <text y="48">HTTP</text>
+      <text y="64">0x44</text>
+      <text y="80">MUTX</text>
+      <text y="96">REG</text>
+      <text y="112">APIC</text>
+      <text y="128">SURIC</text>
+    </g>
+
+    <!-- Stream 6 -->
+    <g class="m-col1" transform="translate(790, 0)">
+      <text y="0" fill="#ffffff">GHID</text>
+      <text y="16">X64</text>
+      <text y="32">DBG</text>
+      <text y="48">IDA</text>
+      <text y="64">0xEB</text>
+      <text y="80">JMP</text>
+      <text y="96">MEM</text>
+      <text y="112">DUMP</text>
+      <text y="128">VOLAT</text>
+      <text y="144">ZERO</text>
+    </g>
+
+    <!-- Stream 7 -->
+    <g class="m-col3" transform="translate(870, 0)">
+      <text y="0" fill="#ffffff">0x13</text>
+      <text y="16">0x37</text>
+      <text y="32">ROOT</text>
+      <text y="48">KIT</text>
+      <text y="64">SYS</text>
+      <text y="80">CALL</text>
+      <text y="96">0x0F</text>
+      <text y="112">0x05</text>
+      <text y="128">PROT</text>
+    </g>
+  </g>
+
+  <!-- Laser Scanning Beam -->
+  <g class="scan-beam">
+    <line x1="0" y1="0" x2="950" y2="0" stroke="#00ff66" stroke-width="1.8" opacity="0.3" filter="url(#glow)" />
+    <line x1="0" y1="0" x2="950" y2="0" stroke="#ffffff" stroke-width="0.8" opacity="0.5" />
+  </g>
+
+  <!-- Central Cyber HUD Display Box -->
+  <g transform="translate(130, 28)">
+    <!-- Box Shadow & Backdrop -->
+    <rect x="0" y="0" width="690" height="204" rx="6" fill="#030c07" fill-opacity="0.9" stroke="#00ff66" stroke-width="1.5" filter="url(#glow)" />
+    
+    <!-- Top HUD Bar -->
+    <path d="M 0 28 L 690 28" stroke="#00ff66" stroke-width="0.8" opacity="0.4" />
+    <path d="M 0 176 L 690 176" stroke="#00ff66" stroke-width="0.8" opacity="0.4" />
+
+    <!-- Corner Brackets High-Tech -->
+    <!-- Top-Left -->
+    <path d="M -2 12 L -2 -2 L 12 -2" fill="none" stroke="#00ffaa" stroke-width="2.5" />
+    <!-- Top-Right -->
+    <path d="M 678 -2 L 692 -2 L 692 12" fill="none" stroke="#00ffaa" stroke-width="2.5" />
+    <!-- Bottom-Left -->
+    <path d="M -2 192 L -2 206 L 12 206" fill="none" stroke="#00ffaa" stroke-width="2.5" />
+    <!-- Bottom-Right -->
+    <path d="M 678 206 L 692 206 L 692 192" fill="none" stroke="#00ffaa" stroke-width="2.5" />
+
+    <!-- Header Status Row -->
+    <g transform="translate(20, 19)">
+      <circle cx="4" cy="-4" r="3.5" fill="#00ff66" class="status-dot" filter="url(#glow)" />
+      <text x="14" y="0" font-family="'Courier New', monospace" font-size="10.5" font-weight="bold" fill="#00ff66" letter-spacing="1.5">NODE: DntdToM // SECURITY_CLEARANCE: LEVEL_4</text>
+      <text x="490" y="0" font-family="'Courier New', monospace" font-size="10" fill="#00ffaa" opacity="0.8" letter-spacing="1">[PROTO: THREAT_HUNTER]</text>
+    </g>
+
+    <!-- Main Title: DntdToM -->
+    <text x="345" y="90" text-anchor="middle" class="hud-title" font-size="44" fill="#00ff66" filter="url(#superGlow)">
+      DntdToM
+    </text>
+
+    <!-- Subtitle: Research & Engineering Focus -->
+    <text x="345" y="124" text-anchor="middle" font-family="'Courier New', monospace" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="3.5" filter="url(#glow)">
+      MALWARE ANALYSIS &amp; THREAT DETECTION
+    </text>
+
+    <!-- Technical Badges / Sub-labels -->
+    <g transform="translate(95, 142)">
+      <!-- Badge 1: Reverse Engineering -->
+      <rect x="0" y="0" width="150" height="20" rx="3" fill="#002b11" stroke="#00ff66" stroke-width="0.8" opacity="0.9" />
+      <text x="75" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="9.5" font-weight="bold" fill="#00ff88">REVERSE ENGINEERING</text>
+
+      <!-- Badge 2: YARA / Sigma -->
+      <rect x="175" y="0" width="150" height="20" rx="3" fill="#002b11" stroke="#00ff66" stroke-width="0.8" opacity="0.9" />
+      <text x="250" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="9.5" font-weight="bold" fill="#00ff88">YARA / SIGMA RULES</text>
+
+      <!-- Badge 3: Threat Hunting -->
+      <rect x="350" y="0" width="150" height="20" rx="3" fill="#2b000a" stroke="#ff0055" stroke-width="0.8" opacity="0.9" />
+      <text x="425" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="9.5" font-weight="bold" fill="#ff3377">THREAT HUNTING</text>
+    </g>
+
+    <!-- Footer HUD Indicators -->
+    <g transform="translate(20, 192)">
+      <text x="0" y="0" font-family="'Courier New', monospace" font-size="9" fill="#00ff66" opacity="0.7">STATUS: DISSECTING_BINARIES</text>
+      <text x="235" y="0" font-family="'Courier New', monospace" font-size="9" fill="#00ff66" opacity="0.7">LAB: ISOLATED_SANDBOX</text>
+      <text x="475" y="0" font-family="'Courier New', monospace" font-size="9" fill="#ff0055" font-weight="bold">TARGET: MALICIOUS_PAYLOADS</text>
+    </g>
+  </g>
+
+  <!-- Left Cyber Deco Radar -->
+  <g transform="translate(65, 130)" opacity="0.5">
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#00ff66" stroke-width="0.8" stroke-dasharray="3,3" />
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#00ff66" stroke-width="0.8" />
+    <line x1="-32" y1="0" x2="32" y2="0" stroke="#00ff66" stroke-width="0.6" />
+    <line x1="0" y1="-32" x2="0" y2="32" stroke="#00ff66" stroke-width="0.6" />
+    <circle cx="6" cy="-8" r="2" fill="#00ff66" class="status-dot" />
+  </g>
+
+  <!-- Right Cyber Deco Radar (Threat alert) -->
+  <g transform="translate(885, 130)" opacity="0.6">
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#ff0055" stroke-width="0.8" stroke-dasharray="4,2" />
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#ff0055" stroke-width="0.8" />
+    <line x1="-32" y1="0" x2="32" y2="0" stroke="#ff0055" stroke-width="0.6" />
+    <line x1="0" y1="-32" x2="0" y2="32" stroke="#ff0055" stroke-width="0.6" />
+    <circle cx="-5" cy="7" r="2.5" fill="#ff0055" class="status-dot" />
+  </g>
+
+  <!-- Scanline Overlay -->
+  <rect width="950" height="260" fill="url(#scanlines)" pointer-events="none" />
+</svg>

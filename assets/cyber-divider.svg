@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 24" width="100%" height="24">
+  <defs>
+    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff66" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00ff66" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#00ffaa" stop-opacity="1" />
+      <stop offset="75%" stop-color="#00ff66" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00ff66" stop-opacity="0" />
+    </linearGradient>
+    <filter id="laserGlow" x="-20%" y="-100%" width="140%" height="300%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Laser Beam -->
+  <line x1="10" y1="12" x2="890" y2="12" stroke="url(#laserGrad)" stroke-width="1.5" filter="url(#laserGlow)" />
+  
+  <!-- Cyber Circuit Node In Center -->
+  <g transform="translate(450, 12)">
+    <polygon points="-12,0 -6,-6 6,-6 12,0 6,6 -6,6" fill="#031209" stroke="#00ffaa" stroke-width="1.2" filter="url(#laserGlow)" />
+    <circle cx="0" cy="0" r="2.5" fill="#00ff66">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Left Accent Diamond -->
+  <g transform="translate(180, 12)">
+    <polygon points="-4,0 0,-4 4,0 0,4" fill="#00ff66" opacity="0.6" />
+  </g>
+
+  <!-- Right Accent Diamond -->
+  <g transform="translate(720, 12)">
+    <polygon points="-4,0 0,-4 4,0 0,4" fill="#00ff66" opacity="0.6" />
+  </g>
+</svg>

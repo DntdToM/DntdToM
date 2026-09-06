@@ -1,0 +1,36 @@
+name: Update Security Telemetry & Metrics
+
+on:
+  schedule:
+    # Run twice daily (00:00 & 12:00 UTC)
+    - cron: "0 0,12 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/**"
+
+jobs:
+  telemetry:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Setup Python Runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Execute Security Telemetry Script
+        run: python scripts/update-metrics.py
+
+      - name: Commit & Push Telemetry Updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Security Bot"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🛡️ [Automated] Refresh Security Radar & Telemetry [skip ci]" && git push)
