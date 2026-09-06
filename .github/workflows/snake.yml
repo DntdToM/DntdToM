@@ -24,7 +24,7 @@ jobs:
           github_user_name: DntdToM
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2300ff66&color_dots=%23161b22,%23003b1a,%23007534,%2300b84f,%2300ff66
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%23ffffff&color_dots=%23161b22,%2321262d,%2330363d,%238b949e,%23ffffff
 
       - name: Push Snake SVG to Output Branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
