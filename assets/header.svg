@@ -36,7 +36,7 @@
       .hud{font-family:'JetBrains Mono','Fira Code','SF Mono',Consolas,monospace;font-size:9.5px;letter-spacing:1.2px;fill:#484f58}
       .lab-t{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;font-weight:700;font-size:16px;letter-spacing:.8px;fill:#f0f6fc}
       .lab-s{font-family:'JetBrains Mono','Fira Code',monospace;font-size:10px;letter-spacing:1.5px;fill:#8b949e}
-      .hex{font-family:'Courier New',monospace;font-size:10px;letter-spacing:16px;text-anchor:middle}
+      .hex{font-family:'Courier New',monospace;font-size:11px;letter-spacing:12px;text-anchor:middle}
       .tagline{font-family:'JetBrains Mono','Fira Code',monospace;font-size:9px;fill:#484f58;letter-spacing:1px;animation:pulse 3s ease-in-out infinite}
       .blinker{animation:blink 2s ease-in-out infinite}
       .scanbeam{animation:scan 5s ease-in-out infinite}
@@ -62,7 +62,7 @@
   <!-- ====== DENSE STATIC HEX MATRIX (5 opacity layers for depth) ====== -->
 
   <!-- Layer 1: Deepest / faintest (far background) -->
-  <g class="hex" fill="#21262d" opacity="0.5">
+  <g class="hex" fill="#30363d" opacity="0.7">
     <text x="460" y="16">4 D 5 A 9 0 0 0 F F F E 0 3 0 0 0 4 0 0 B 8 0 0 4 0</text>
     <text x="460" y="32">0 E 1 F B A 0 E 0 0 B 4 0 9 C D 2 1 B 8 0 1 4 C C D</text>
     <text x="460" y="48">5 4 6 8 6 9 7 3 2 0 7 0 7 2 6 F 6 7 7 2 6 1 6 D 2 0</text>
@@ -72,14 +72,14 @@
   </g>
 
   <!-- Layer 2: Slightly visible -->
-  <g class="hex" fill="#30363d" opacity="0.55">
+  <g class="hex" fill="#484f58" opacity="0.6">
     <text x="460" y="64">C C E B 0 F 0 5 9 0 C 3 4 8 8 9 E 5 8 3 E C 2 0 8 B</text>
     <text x="460" y="80">4 5 F C 0 1 D 0 C 9 C 3 5 5 8 9 E 5 4 8 8 3 E C 2 8</text>
     <text x="460" y="256">0 F B 6 C 0 8 5 C 0 7 4 0 A E B 0 5 B 8 0 1 0 0 0 0</text>
   </g>
 
   <!-- Layer 3: Main visible field (surrounds title) -->
-  <g class="hex" fill="#484f58" opacity="0.5">
+  <g class="hex" fill="#6e7681" opacity="0.55">
     <text x="460" y="100">M Z P E N O P X O R J M P C A L L R E T P U S H M O V</text>
     <text x="460" y="118">Y A R A R U L E S I G M A D E T E C T S C A N H I T</text>
     <text x="460" y="136">A P I H O O K I A T E A T V A R V A E P T L S S E H</text>
@@ -89,7 +89,7 @@
   </g>
 
   <!-- Layer 4: Brighter accents (near title area) -->
-  <g class="hex" fill="#8b949e" opacity="0.2">
+  <g class="hex" fill="#8b949e" opacity="0.35">
     <text x="460" y="148">R A X R C X R D X R S I R D I R 8 R 9 R 1 0 R B P 0</text>
     <text x="460" y="196">C 2 I O C T T P A P T R A T B O T C & C D N S T C P 0</text>
   </g>
