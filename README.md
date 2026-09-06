@@ -1,7 +1,7 @@
 <div align="center">
 
   <!-- Minimalist Monochrome Banner -->
-  <img src="assets/header.svg" alt="DntdToM // Information Security Researcher" width="100%" />
+  <img src="assets/banner.svg" alt="DntdToM // Information Security Researcher" width="100%" />
 
 </div>
 
