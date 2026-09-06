@@ -5,48 +5,179 @@
       <stop offset="50%" stop-color="#30363d" stop-opacity="1"/>
       <stop offset="100%" stop-color="#30363d" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="vig-l" x1="0%" y1="0%" x2="15%" y2="0%">
+    <linearGradient id="vl" x1="0%" y1="0%" x2="12%" y2="0%">
       <stop offset="0%" stop-color="#0d1117"/>
       <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="vig-r" x1="85%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="vr" x1="88%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0d1117" stop-opacity="0"/>
       <stop offset="100%" stop-color="#0d1117"/>
     </linearGradient>
-    <linearGradient id="vig-t" x1="0%" y1="0%" x2="0%" y2="12%">
+    <linearGradient id="vt" x1="0%" y1="0%" x2="0%" y2="10%">
       <stop offset="0%" stop-color="#0d1117"/>
       <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="vig-b" x1="0%" y1="88%" x2="0%" y2="100%">
+    <linearGradient id="vb" x1="0%" y1="90%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#0d1117" stop-opacity="0"/>
       <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <!-- Scan beam gradient -->
+    <linearGradient id="sb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="920" height="320" fill="#0d1117" rx="6"/>
 
-  <!-- ====== DENSE HEX/ASM MATRIX (Static layers for GitHub compatibility) ====== -->
+  <!-- ====== ANIMATED MATRIX CODE RAIN (SMIL) ====== -->
 
-  <!-- Layer 1: Deepest background rows -->
-  <g font-family="'Courier New',monospace" font-size="11" letter-spacing="12" text-anchor="middle" fill="#30363d" opacity="0.7">
-    <text x="460" y="18">4 D 5 A 9 0 0 0 F F F E 0 3 0 0 0 4 0 0 B 8 0 0 4 0</text>
-    <text x="460" y="34">0 E 1 F B A 0 E 0 0 B 4 0 9 C D 2 1 B 8 0 1 4 C C D</text>
-    <text x="460" y="50">5 4 6 8 6 9 7 3 2 0 7 0 7 2 6 F 6 7 7 2 6 1 6 D 2 0</text>
-    <text x="460" y="274">4 8 8 D 0 D F 7 F F F F 4 8 8 B 0 5 E 8 0 0 0 0 0 0</text>
-    <text x="460" y="290">3 1 C 0 4 8 C 7 C 0 3 C 0 F 0 5 5 D C 3 F 4 F A F B</text>
-    <text x="460" y="306">D E A D B E E F C A F E B A B E F 0 0 D D 0 0 D 1 3</text>
+  <!-- Column 1: Hex opcodes -->
+  <g font-family="'Courier New',monospace" font-size="11" fill="#484f58" opacity="0.5">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="32,-320" to="32,340" dur="6s" repeatCount="indefinite"/>
+      <text y="0">4D</text><text y="16">5A</text><text y="32">90</text><text y="48">00</text>
+      <text y="64">FF</text><text y="80">FE</text><text y="96">B8</text><text y="112">40</text>
+      <text y="128">0E</text><text y="144">1F</text><text y="160">BA</text><text y="176">CD</text>
+      <text y="192">21</text><text y="208">B4</text><text y="224">09</text><text y="240">4C</text>
+      <text y="256">CC</text><text y="272">EB</text><text y="288">0F</text><text y="304">05</text>
+      <text y="320">C3</text>
+    </g>
   </g>
 
-  <!-- Layer 2: Inner rows -->
-  <g font-family="'Courier New',monospace" font-size="11" letter-spacing="12" text-anchor="middle" fill="#484f58" opacity="0.6">
-    <text x="460" y="66">C C E B 0 F 0 5 9 0 C 3 4 8 8 9 E 5 8 3 E C 2 0 8 B</text>
-    <text x="460" y="82">4 5 F C 0 1 D 0 C 9 C 3 5 5 8 9 E 5 4 8 8 3 E C 2 8</text>
-    <text x="460" y="258">0 F B 6 C 0 8 5 C 0 7 4 0 A E B 0 5 B 8 0 1 0 0 0 0</text>
+  <!-- Column 2: ASM mnemonics -->
+  <g font-family="'Courier New',monospace" font-size="10" fill="#484f58" opacity="0.4">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="78,-280" to="78,360" dur="4.5s" repeatCount="indefinite"/>
+      <text y="0">MZ</text><text y="15">PE</text><text y="30">DLL</text><text y="45">EXE</text>
+      <text y="60">EIP</text><text y="75">RSP</text><text y="90">RBP</text><text y="105">RAX</text>
+      <text y="120">XOR</text><text y="135">MOV</text><text y="150">JMP</text><text y="165">NOP</text>
+      <text y="180">RET</text><text y="195">INT</text><text y="210">PUSH</text><text y="225">CALL</text>
+      <text y="240">POP</text><text y="255">SYS</text><text y="270">LEA</text>
+    </g>
   </g>
 
-  <!-- Layer 3: Main visible field (around title) -->
-  <g font-family="'Courier New',monospace" font-size="11" letter-spacing="12" text-anchor="middle" fill="#6e7681" opacity="0.55">
+  <!-- Column 3: Hex bytes -->
+  <g font-family="'Courier New',monospace" font-size="10" fill="#30363d" opacity="0.55">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="138,-350" to="138,350" dur="7.2s" repeatCount="indefinite"/>
+      <text y="0">CC</text><text y="15">EB</text><text y="30">48</text><text y="45">89</text>
+      <text y="60">E5</text><text y="75">83</text><text y="90">EC</text><text y="105">20</text>
+      <text y="120">8B</text><text y="135">45</text><text y="150">FC</text><text y="165">01</text>
+      <text y="180">D0</text><text y="195">C9</text><text y="210">0F</text><text y="225">B6</text>
+      <text y="240">C0</text><text y="255">85</text><text y="270">74</text><text y="285">0A</text>
+      <text y="300">F4</text><text y="315">FA</text><text y="330">FB</text>
+    </g>
+  </g>
+
+  <!-- Column 4: YARA/Detection -->
+  <g font-family="'Courier New',monospace" font-size="10" fill="#484f58" opacity="0.4">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="198,-300" to="198,340" dur="5.3s" repeatCount="indefinite"/>
+      <text y="0">YARA</text><text y="16">RULE</text><text y="32">META</text><text y="48">HASH</text>
+      <text y="64">SCAN</text><text y="80">BYTE</text><text y="96">WIDE</text><text y="112">ANY</text>
+      <text y="128">ALL</text><text y="144">OF</text><text y="160">THEM</text><text y="176">SECT</text>
+      <text y="192">TRUE</text><text y="208">HIT</text><text y="224">DESC</text><text y="240">VT</text>
+      <text y="256">IOC</text><text y="272">TTP</text>
+    </g>
+  </g>
+
+  <!-- Column 5: Threat terms -->
+  <g font-family="'Courier New',monospace" font-size="10" fill="#30363d" opacity="0.5">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="268,-260" to="268,380" dur="4.1s" repeatCount="indefinite"/>
+      <text y="0">C2</text><text y="16">APT</text><text y="32">RAT</text><text y="48">BOT</text>
+      <text y="64">DNS</text><text y="80">TCP</text><text y="96">SSL</text><text y="112">TLS</text>
+      <text y="128">443</text><text y="144">80</text><text y="160">4444</text><text y="176">1337</text>
+      <text y="192">UDP</text><text y="208">SYN</text><text y="224">ACK</text><text y="240">FIN</text>
+    </g>
+  </g>
+
+  <!-- Column 6: Deep hex -->
+  <g font-family="'Courier New',monospace" font-size="10" fill="#30363d" opacity="0.45">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="340,-340" to="340,340" dur="6.5s" repeatCount="indefinite"/>
+      <text y="0">48</text><text y="14">8D</text><text y="28">0D</text><text y="42">F7</text>
+      <text y="56">FF</text><text y="70">48</text><text y="84">8B</text><text y="98">05</text>
+      <text y="112">E8</text><text y="126">00</text><text y="140">48</text><text y="154">C7</text>
+      <text y="168">C0</text><text y="182">3C</text><text y="196">31</text><text y="210">C0</text>
+      <text y="224">89</text><text y="238">E5</text><text y="252">5D</text><text y="266">C3</text>
+    </g>
+  </g>
+
+  <!-- Column 7: Right side - Evasion -->
+  <g font-family="'Courier New',monospace" font-size="10" fill="#484f58" opacity="0.4">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="578,-290" to="578,350" dur="5.8s" repeatCount="indefinite"/>
+      <text y="0">VM</text><text y="15">SAND</text><text y="30">BOX</text><text y="45">EVD</text>
+      <text y="60">DBG</text><text y="75">RDTSC</text><text y="90">CPUID</text><text y="105">INT3</text>
+      <text y="120">SIDT</text><text y="135">PEB</text><text y="150">TEB</text><text y="165">NtQ</text>
+      <text y="180">IsD</text><text y="195">SLDT</text><text y="210">SGDT</text><text y="225">BRK</text>
+      <text y="240">TRAP</text>
+    </g>
+  </g>
+
+  <!-- Column 8: Sigma terms -->
+  <g font-family="'Courier New',monospace" font-size="10" fill="#30363d" opacity="0.5">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="648,-310" to="648,330" dur="4.8s" repeatCount="indefinite"/>
+      <text y="0">SIGMA</text><text y="16">RULE</text><text y="32">LOGSRC</text><text y="48">EVTID</text>
+      <text y="64">PROC</text><text y="80">CREAT</text><text y="96">SUSP</text><text y="112">FILE</text>
+      <text y="128">WRITE</text><text y="144">REG</text><text y="160">KEY</text><text y="176">MUTEX</text>
+      <text y="192">PIPE</text><text y="208">DRV</text><text y="224">SVC</text><text y="240">DETECT</text>
+    </g>
+  </g>
+
+  <!-- Column 9: Hex -->
+  <g font-family="'Courier New',monospace" font-size="11" fill="#484f58" opacity="0.45">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="728,-270" to="728,370" dur="5.1s" repeatCount="indefinite"/>
+      <text y="0">0F</text><text y="16">B6</text><text y="32">C0</text><text y="48">85</text>
+      <text y="64">74</text><text y="80">0A</text><text y="96">EB</text><text y="112">05</text>
+      <text y="128">B8</text><text y="144">01</text><text y="160">00</text><text y="176">5D</text>
+      <text y="192">C3</text><text y="208">CC</text><text y="224">90</text><text y="240">F4</text>
+    </g>
+  </g>
+
+  <!-- Column 10: Tools -->
+  <g font-family="'Courier New',monospace" font-size="10" fill="#30363d" opacity="0.5">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="798,-330" to="798,350" dur="6.8s" repeatCount="indefinite"/>
+      <text y="0">GHID</text><text y="15">IDA</text><text y="30">x64d</text><text y="45">r2</text>
+      <text y="60">GDB</text><text y="75">HOOK</text><text y="90">IAT</text><text y="105">EAT</text>
+      <text y="120">VA</text><text y="135">RVA</text><text y="150">EP</text><text y="165">TLS</text>
+      <text y="180">SEH</text><text y="195">API</text><text y="210">DMP</text><text y="225">VOL</text>
+    </g>
+  </g>
+
+  <!-- Column 11: Magic bytes -->
+  <g font-family="'Courier New',monospace" font-size="10" fill="#484f58" opacity="0.4">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="855,-300" to="855,340" dur="3.9s" repeatCount="indefinite"/>
+      <text y="0">DE</text><text y="14">AD</text><text y="28">BE</text><text y="42">EF</text>
+      <text y="56">CA</text><text y="70">FE</text><text y="84">BA</text><text y="98">BE</text>
+      <text y="112">F0</text><text y="126">0D</text><text y="140">D0</text><text y="154">0D</text>
+      <text y="168">13</text><text y="182">37</text><text y="196">00</text><text y="210">FF</text>
+      <text y="224">7F</text><text y="238">45</text><text y="252">4C</text><text y="266">46</text>
+    </g>
+  </g>
+
+  <!-- Column 12: PE headers -->
+  <g font-family="'Courier New',monospace" font-size="10" fill="#30363d" opacity="0.45">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="898,-280" to="898,360" dur="5.5s" repeatCount="indefinite"/>
+      <text y="0">PE</text><text y="14">ELF</text><text y="28">MZ</text><text y="42">PK</text>
+      <text y="56">COFF</text><text y="70">MACH</text><text y="84">OBJ</text><text y="98">LIB</text>
+      <text y="112">SYS</text><text y="126">DRV</text><text y="140">INF</text><text y="154">CAT</text>
+    </g>
+  </g>
+
+  <!-- ====== STATIC HEX BACKGROUND TEXTURE (depth layer behind title) ====== -->
+  <g font-family="'Courier New',monospace" font-size="11" letter-spacing="12" text-anchor="middle" fill="#21262d" opacity="0.8">
     <text x="460" y="102">M Z P E N O P X O R J M P C A L L R E T P U S H M O V</text>
     <text x="460" y="120">Y A R A R U L E S I G M A D E T E C T S C A N H I T</text>
     <text x="460" y="138">A P I H O O K I A T E A T V A R V A E P T L S S E H</text>
@@ -55,21 +186,20 @@
     <text x="460" y="246">G H I D R A I D A P R O x 6 4 d b g R A D A R E 2 0</text>
   </g>
 
-  <!-- Layer 4: Brighter accents closest to title -->
-  <g font-family="'Courier New',monospace" font-size="11" letter-spacing="12" text-anchor="middle" fill="#8b949e" opacity="0.35">
-    <text x="460" y="150">R A X R C X R D X R S I R D I R 8 R 9 R 1 0 R B P 0</text>
-    <text x="460" y="198">C 2 I O C T T P A P T R A T B O T D N S T C P U D P 0</text>
-  </g>
+  <!-- Vignette edges -->
+  <rect width="920" height="320" fill="url(#vl)" rx="6"/>
+  <rect width="920" height="320" fill="url(#vr)" rx="6"/>
+  <rect width="920" height="320" fill="url(#vt)" rx="6"/>
+  <rect width="920" height="320" fill="url(#vb)" rx="6"/>
 
-  <!-- Vignette edges (linear gradients instead of radialGradient+filter) -->
-  <rect width="920" height="320" fill="url(#vig-l)" rx="6"/>
-  <rect width="920" height="320" fill="url(#vig-r)" rx="6"/>
-  <rect width="920" height="320" fill="url(#vig-t)" rx="6"/>
-  <rect width="920" height="320" fill="url(#vig-b)" rx="6"/>
+  <!-- ====== ANIMATED SCAN BEAM (SMIL) ====== -->
+  <rect x="40" width="840" height="2" fill="url(#sb)" rx="1">
+    <animateTransform attributeName="transform" type="translate" from="0,-10" to="0,330" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.9;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
 
   <!-- ====== TOP LAB BRANDING ====== -->
   <g transform="translate(460,42)" text-anchor="middle">
-    <!-- Minimal Flask/Beaker Icon -->
     <g transform="translate(-14,-22)" stroke="#c9d1d9" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.75">
       <path d="M9 3h10M12 3v5l-6 11a2 2 0 0 0 1.7 3h14.6a2 2 0 0 0 1.7-3l-6-11V3"/>
       <line x1="8.5" y1="15" x2="19.5" y2="15" stroke-dasharray="2 2" stroke-width="1"/>
@@ -81,7 +211,7 @@
   <!-- Top Divider -->
   <line x1="80" y1="62" x2="840" y2="62" stroke="url(#lf)" stroke-width="0.7"/>
 
-  <!-- ====== HUD CORNER BRACKETS ====== -->
+  <!-- ====== HUD CORNER BRACKETS with blinking dots ====== -->
   <!-- TL -->
   <g transform="translate(36,84)">
     <path d="M 0 14 L 0 0 L 14 0" fill="none" stroke="#30363d" stroke-width="1.3"/>
@@ -96,15 +226,26 @@
   <g transform="translate(36,272)">
     <path d="M 0 -14 L 0 0 L 14 0" fill="none" stroke="#30363d" stroke-width="1.3"/>
     <text x="20" y="-4" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,monospace" font-size="9.5" letter-spacing="1.2" fill="#484f58">PIPELINE: YARA_SIGMA_ACTIVE</text>
+    <!-- Blinking indicator dot -->
+    <circle cx="6" cy="-20" r="2.5" fill="#6e7681">
+      <animate attributeName="opacity" values="1;0.15;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
   </g>
   <!-- BR -->
   <g transform="translate(884,272)">
     <path d="M -2 0 L 12 0 L 12 -14" fill="none" stroke="#30363d" stroke-width="1.3"/>
     <text x="-6" y="-4" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,monospace" font-size="9.5" letter-spacing="1.2" fill="#484f58" text-anchor="end">STATUS: ARMED // DEFENSE_ACTIVE</text>
+    <!-- Blinking indicator dot -->
+    <circle cx="6" cy="-20" r="2.5" fill="#6e7681">
+      <animate attributeName="opacity" values="1;0.15;1" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
   </g>
 
-  <!-- ====== MAIN TITLE ====== -->
-  <text x="460" y="176" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Inter','Helvetica Neue',sans-serif" font-weight="900" font-size="56" letter-spacing="14" fill="#f0f6fc">DNTDTOM</text>
+  <!-- ====== MAIN TITLE with subtle pulse ====== -->
+  <text x="460" y="176" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Inter','Helvetica Neue',sans-serif" font-weight="900" font-size="56" letter-spacing="14" fill="#f0f6fc">
+    DNTDTOM
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+  </text>
 
   <!-- Subtitle -->
   <text x="460" y="200" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,monospace" font-size="12" font-weight="700" letter-spacing="5" fill="#c9d1d9">INFORMATION SECURITY // MALWARE &amp; THREAT DETECTION</text>
@@ -112,8 +253,11 @@
   <!-- Sub-bracket -->
   <text x="460" y="220" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,monospace" font-size="9.5" letter-spacing="2" fill="#8b949e">[ BINARY_DISSECTION // PAYLOAD_ANALYSIS // DETECTION_ENGINEERING ]</text>
 
-  <!-- Tagline -->
-  <text x="460" y="250" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="9" fill="#484f58" letter-spacing="1">Reversing binaries. Hunting threats. Building defenses.</text>
+  <!-- Tagline with pulse -->
+  <text x="460" y="250" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="9" fill="#484f58" letter-spacing="1">
+    Reversing binaries. Hunting threats. Building defenses.
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite"/>
+  </text>
 
   <!-- Bottom Divider -->
   <line x1="200" y1="292" x2="720" y2="292" stroke="url(#lf)" stroke-width="0.5"/>
