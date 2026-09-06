@@ -21,18 +21,10 @@
 
 <br/>
 
-<!-- Stats Cards (Stacked vertically for reliable rendering) -->
+<!-- Streak Stats (Monochrome) -->
 <div align="center">
   <a href="https://github.com/DntdToM">
     <img src="https://streak-stats.demolab.com/?user=DntdToM&background=0d1117&border=21262d&stroke=30363d&ring=c9d1d9&fire=ffffff&currStreakNum=ffffff&sideNums=c9d1d9&currStreakLabel=8b949e&sideLabels=8b949e&dates=484f58&border_radius=6" width="520" alt="Commit Streak" />
-  </a>
-</div>
-
-<br/>
-
-<div align="center">
-  <a href="https://github.com/DntdToM">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=DntdToM&show_icons=true&bg_color=0d1117&text_color=8b949e&title_color=c9d1d9&icon_color=8b949e&border_color=21262d&border_radius=6&include_all_commits=true&count_private=true" width="520" alt="GitHub Stats" />
   </a>
 </div>
 
